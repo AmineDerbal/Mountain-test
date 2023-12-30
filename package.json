@@ -18,7 +18,6 @@
   "bugs": {
     "url": "https://github.com/AmineDerbal/Mountain-test/issues"
   },
-  "homepage": "https://github.com/AmineDerbal/Mountain-test#readme",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
