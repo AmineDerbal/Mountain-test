@@ -8,15 +8,18 @@ module.exports = {
     screens: {
       md: { max: '700px' },
     },
-    colors: {
-      white: colors.white,
-    },
     extend: {
       backgroundImage: {
         hero: "url('/src/assets/hero.png')",
       },
       fontFamily: {
         lato: ['Lato', 'sans-serif'],
+        bebasNeue: ['Bebas Neue', 'sans-serif'],
+      },
+      colors: {
+        white: colors.white,
+        primary: '#414f6b',
+        secondary: '#4d4d4d',
       },
     },
   },
