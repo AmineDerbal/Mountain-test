@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .bg-slider {
+    background-color: rgba(54, 67, 89, 0.5);
+  }
+}
