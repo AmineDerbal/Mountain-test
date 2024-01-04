@@ -23,6 +23,7 @@ module.exports = {
         primary: '#414f6b',
         secondary: '#4d4d4d',
         tertiary: '#707f9a',
+        dot: '#bbb',
       },
     },
   },
