@@ -47,6 +47,12 @@ const History = () => {
               className="w-[180px] h-[120px] object-fill"
             />
           </div>
+          <div className="text-center mt-[1rem] md:hidden">
+            <span className="h-[15px] w-[15px] my-0 mx-[2px] bg-white inline-block cursor-pointer rounded-full"></span>
+            <span className="h-[15px] w-[15px] my-0 mx-[2px] bg-dot inline-block cursor-pointer rounded-full"></span>
+            <span className="h-[15px] w-[15px] my-0 mx-[2px] bg-dot inline-block cursor-pointer rounded-full"></span>
+            <span className="h-[15px] w-[15px] my-0 mx-[2px] bg-dot inline-block cursor-pointer rounded-full"></span>
+          </div>
         </div>
       </div>
     </section>
