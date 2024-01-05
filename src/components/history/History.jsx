@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Header from './Header';
 import { photo1, photo2 } from '../../assets';
 
@@ -29,25 +30,31 @@ const History = () => {
             <img
               src={photo1}
               alt="1"
-              className="w-[180px] h-[120px] object-fill"
+              className="w-[195px] h-[120px] object-fill"
             />
             <img
               src={photo2}
               alt="2"
-              className="w-[180px] h-[120px] object-fill"
+              className="w-[195px] h-[120px] object-fill"
             />
             <img
               src={photo1}
               alt="1"
-              className="w-[180px] h-[120px] object-fill"
+              className="w-[195px] h-[120px] object-fill"
             />
             <img
               src={photo2}
               alt="2"
-              className="w-[180px] h-[120px] object-fill"
+              className="w-[195px] h-[120px] object-fill"
             />
           </div>
           <div className="text-center mt-[1rem] md:hidden">
+            <span className="h-[15px] w-[15px] my-0 mx-[2px] bg-white inline-block cursor-pointer rounded-full"></span>
+            <span className="h-[15px] w-[15px] my-0 mx-[2px] bg-dot inline-block cursor-pointer rounded-full"></span>
+            <span className="h-[15px] w-[15px] my-0 mx-[2px] bg-dot inline-block cursor-pointer rounded-full"></span>
+            <span className="h-[15px] w-[15px] my-0 mx-[2px] bg-dot inline-block cursor-pointer rounded-full"></span>
+          </div>
+          <div className="text-center mt-[1rem] ">
             <span className="h-[15px] w-[15px] my-0 mx-[2px] bg-white inline-block cursor-pointer rounded-full"></span>
             <span className="h-[15px] w-[15px] my-0 mx-[2px] bg-dot inline-block cursor-pointer rounded-full"></span>
             <span className="h-[15px] w-[15px] my-0 mx-[2px] bg-dot inline-block cursor-pointer rounded-full"></span>
