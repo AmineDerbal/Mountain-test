@@ -5,6 +5,8 @@ import { photo1, photo2 } from '../../assets';
 const History = () => {
   const [mdScreen, setMdScreen] = useState(false);
   const [currentImage, setCurrentImage] = useState(1);
+  useEffect(() => {}, [currentImage]);
+
   useEffect(() => {
     const handleResize = () => {
       const screenSize = window.innerWidth;
@@ -47,7 +49,6 @@ const History = () => {
             <img
               src={photo1}
               alt="1"
-              // className="w-[195px] h-[120px] object-fill"
               className={`w-[195px] h-[120px] object-fill ${
                 (mdScreen && currentImage === 1) || !mdScreen
                   ? 'block'
@@ -57,7 +58,6 @@ const History = () => {
             <img
               src={photo2}
               alt="2"
-              // className="w-[195px] h-[120px] object-fill"
               className={`w-[195px] h-[120px] object-fill ${
                 (mdScreen && currentImage === 2) || !mdScreen
                   ? 'block'
@@ -67,7 +67,6 @@ const History = () => {
             <img
               src={photo1}
               alt="1"
-              // className="w-[195px] h-[120px] object-fill"
               className={`w-[195px] h-[120px] object-fill ${
                 (mdScreen && currentImage === 3) || !mdScreen
                   ? 'block'
@@ -77,7 +76,6 @@ const History = () => {
             <img
               src={photo2}
               alt="2"
-              // className="w-[195px] h-[120px] object-fill"
               className={`w-[195px] h-[120px] object-fill ${
                 (mdScreen && currentImage === 4) || !mdScreen
                   ? 'block'
@@ -92,10 +90,30 @@ const History = () => {
             <span className="h-[15px] w-[15px] my-0 mx-[2px] bg-dot inline-block cursor-pointer rounded-full"></span>
           </div>
           <div className="text-center mt-[1rem] hidden md:block">
-            <span className="h-[15px] w-[15px] my-0 mx-[2px] bg-white inline-block cursor-pointer rounded-full"></span>
-            <span className="h-[15px] w-[15px] my-0 mx-[2px] bg-dot inline-block cursor-pointer rounded-full"></span>
-            <span className="h-[15px] w-[15px] my-0 mx-[2px] bg-dot inline-block cursor-pointer rounded-full"></span>
-            <span className="h-[15px] w-[15px] my-0 mx-[2px] bg-dot inline-block cursor-pointer rounded-full"></span>
+            <span
+              className={`h-[15px] w-[15px] my-0 mx-[2px] inline-block cursor-pointer rounded-full ${
+                currentImage === 1 ? 'bg-white' : 'bg-dot'
+              }`}
+              onClick={() => setCurrentImage(1)}
+            ></span>
+            <span
+              className={`h-[15px] w-[15px] my-0 mx-[2px] inline-block cursor-pointer rounded-full ${
+                currentImage === 2 ? 'bg-white' : 'bg-dot'
+              }`}
+              onClick={() => setCurrentImage(2)}
+            ></span>
+            <span
+              className={`h-[15px] w-[15px] my-0 mx-[2px] inline-block cursor-pointer rounded-full ${
+                currentImage === 3 ? 'bg-white' : 'bg-dot'
+              }`}
+              onClick={() => setCurrentImage(3)}
+            ></span>
+            <span
+              className={`h-[15px] w-[15px] my-0 mx-[2px] inline-block cursor-pointer rounded-full ${
+                currentImage === 4 ? 'bg-white' : 'bg-dot'
+              }`}
+              onClick={() => setCurrentImage(4)}
+            ></span>
           </div>
         </div>
       </div>
