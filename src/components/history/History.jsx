@@ -4,6 +4,7 @@ import { photo1, photo2 } from '../../assets';
 
 const History = () => {
   const [mdScreen, setMdScreen] = useState(false);
+  const [currentImage, setCurrentImage] = useState(1);
   useEffect(() => {
     const handleResize = () => {
       const screenSize = window.innerWidth;
@@ -46,22 +47,42 @@ const History = () => {
             <img
               src={photo1}
               alt="1"
-              className="w-[195px] h-[120px] object-fill"
+              // className="w-[195px] h-[120px] object-fill"
+              className={`w-[195px] h-[120px] object-fill ${
+                (mdScreen && currentImage === 1) || !mdScreen
+                  ? 'block'
+                  : 'hidden'
+              }`}
             />
             <img
               src={photo2}
               alt="2"
-              className="w-[195px] h-[120px] object-fill"
+              // className="w-[195px] h-[120px] object-fill"
+              className={`w-[195px] h-[120px] object-fill ${
+                (mdScreen && currentImage === 2) || !mdScreen
+                  ? 'block'
+                  : 'hidden'
+              }`}
             />
             <img
               src={photo1}
               alt="1"
-              className="w-[195px] h-[120px] object-fill"
+              // className="w-[195px] h-[120px] object-fill"
+              className={`w-[195px] h-[120px] object-fill ${
+                (mdScreen && currentImage === 3) || !mdScreen
+                  ? 'block'
+                  : 'hidden'
+              }`}
             />
             <img
               src={photo2}
               alt="2"
-              className="w-[195px] h-[120px] object-fill"
+              // className="w-[195px] h-[120px] object-fill"
+              className={`w-[195px] h-[120px] object-fill ${
+                (mdScreen && currentImage === 4) || !mdScreen
+                  ? 'block'
+                  : 'hidden'
+              }`}
             />
           </div>
           <div className="text-center mt-[1rem] md:hidden">
