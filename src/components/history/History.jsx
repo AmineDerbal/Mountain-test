@@ -3,6 +3,22 @@ import Header from './Header';
 import { photo1, photo2 } from '../../assets';
 
 const History = () => {
+  const [mdScreen, setMdScreen] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      const screenSize = window.innerWidth;
+      if (screenSize <= 700 && mdScreen === false) {
+        setMdScreen(true);
+        return;
+      }
+      if (screenSize > 700 && mdScreen === true) {
+        setMdScreen(false);
+        return;
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    handleResize();
+  }, [mdScreen]);
   return (
     <section id="history">
       <Header />
@@ -54,7 +70,7 @@ const History = () => {
             <span className="h-[15px] w-[15px] my-0 mx-[2px] bg-dot inline-block cursor-pointer rounded-full"></span>
             <span className="h-[15px] w-[15px] my-0 mx-[2px] bg-dot inline-block cursor-pointer rounded-full"></span>
           </div>
-          <div className="text-center mt-[1rem] ">
+          <div className="text-center mt-[1rem] hidden md:block">
             <span className="h-[15px] w-[15px] my-0 mx-[2px] bg-white inline-block cursor-pointer rounded-full"></span>
             <span className="h-[15px] w-[15px] my-0 mx-[2px] bg-dot inline-block cursor-pointer rounded-full"></span>
             <span className="h-[15px] w-[15px] my-0 mx-[2px] bg-dot inline-block cursor-pointer rounded-full"></span>
