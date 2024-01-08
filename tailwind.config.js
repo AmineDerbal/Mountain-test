@@ -12,6 +12,8 @@ module.exports = {
       backgroundImage: {
         hero: "url('/src/assets/hero.png')",
         history: "url('/src/assets/peak.png')",
+        tab1: "url('/src/assets/tab-1.png')",
+        tab2: "url('/src/assets/tab-2.png')",
       },
       fontFamily: {
         lato: ['Lato', 'sans-serif'],
@@ -23,6 +25,8 @@ module.exports = {
         primary: '#414f6b',
         secondary: '#4d4d4d',
         tertiary: '#707f9a',
+        navBG: '#364359',
+        navText: '#9299a8',
         dot: '#bbb',
       },
     },
