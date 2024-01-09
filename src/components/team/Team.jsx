@@ -29,7 +29,25 @@ const Team = () => {
         className={`min-h-screen bg-cover bg-no-repeat bg-center ${
           background === 1 ? 'bg-tab1' : 'bg-tab2'
         }`}
-      ></div>
+      >
+        <div className="relative top-[300px] left-[35%] w-fit p-[2rem] bg-white bg-opacity-50">
+          <div>
+            <h2 className="font-bold text-[3rem] text-primary">Schedule</h2>
+            <p className="flex gap-[4rem]">
+              <span> 25 Nov 2016</span> <span>Vestibulim</span>
+            </p>
+            <p className="flex gap-[4rem]">
+              <span> 28 Nov 2016</span> <span>Vestibulim</span>
+            </p>
+            <p className="flex gap-[4rem]">
+              <span> 18 Dec 2016</span> <span>Vestibulim</span>
+            </p>
+            <p className="flex gap-[4rem]">
+              <span> 17 Jan 2017</span> <span>Vestibulim</span>
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
